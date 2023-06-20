@@ -1,0 +1,29 @@
+Object Design for Book Indexing Program
+
+Introduction:
+The Book Indexing Program is designed to index and search books based on keywords. It provides a user interface for adding books to the index and performing search operations.
+
+Class Structure:
+- BookIndexer: Handles the indexing of books and provides methods for adding books, indexing, and searching.
+- BookIndexingProgram: Implements the user interface for interacting with the BookIndexer and allows users to index and search books.
+
+Relationships:
+- The BookIndexingProgram class uses the methods provided by the BookIndexer class to index and search books.
+
+Important Methods and Attributes:
+
+BookIndexer class:
+- books: A collection of books.
+- addBook(String bookTitle, String bookAuthor, int publicationYear): Adds a book to the indexer with the specified title, author, and publication year.
+- indexBooks(): Indexes all the books in the indexer.
+- search(String keyword): Searches for books containing a given keyword.
+
+BookIndexingProgram class:
+- main(String[] args): Entry point of the program. Handles user input and interacts with the BookIndexer.
+
+Conclusion:
+The chosen class structure and methods allow for effective indexing and searching of books. The BookIndexer class manages the collection of books and provides operations to add, index, and search books. The BookIndexingProgram class serves as the user interface, allowing users to interact with the BookIndexer. Overall, this design fulfils the requirements of the Book Indexing Program and promotes modularity and code organization.
+
+I have modified the code in some aspects like I have separated the main class from the BookingIndexingProgram class for better understanding.
+
+Also haven't mentioned the attributes here it is only the classes and the methods which are represented in the code.
