@@ -24,9 +24,9 @@ public class BookIndexer {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNext()) {
                 String word = scanner.next();
-                // Remove any punctuation marks or special characters
+        
                 word = word.replaceAll("[^a-zA-Z0-9]", "");
-                // Add the word to the list
+                
                 if (!word.isEmpty()) {
                     words.add(word);
                 }
@@ -54,15 +54,14 @@ public class BookIndexer {
             String pageFile = pageFiles[i];
             List<String> words = extractWords(pageFile);
 
-            // Remove duplicate page numbers for each word
             Set<Integer> uniquePageNumbers = new HashSet<>();
             uniquePageNumbers.add(i + 1);
 
-            // Process each word
+           
             for (String word : words) {
-                // Exclude common words
+                
                 if (!excludeWords.contains(word.toLowerCase())) {
-                    // Add unique page numbers to word index
+                    
                     if (!index.containsKey(word)) {
                         index.put(word, new HashSet<>());
                     }
